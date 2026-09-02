@@ -1,1 +1,43 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Image Palette Extractor</title><link rel="stylesheet" href="style.css"></head><body><main><header><span>COLOR / CANVAS</span><h1>Image Palette<br>Extractor</h1><p>Upload an image and extract dominant colors locally in your browser.</p></header><section class="upload"><input id="file" type="file" accept="image/*"><canvas id="canvas"></canvas></section><section id="palette" class="palette"></section><p id="note">Images are processed locally in your browser and are not uploaded anywhere.</p></main><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Image Palette Extractor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <span>COLOR / CANVAS</span>
+    <h1>Image Palette<br>Extractor</h1>
+    <p>Upload an image and extract dominant colors locally in your browser.</p>
+  </header>
+
+  <section class="upload">
+    <div class="upload-controls">
+      <label>
+        Choose image
+        <input id="file" type="file" accept="image/*">
+      </label>
+
+      <label>
+        Palette size
+        <select id="paletteSize">
+          <option value="4">4 colors</option>
+          <option value="6" selected>6 colors</option>
+          <option value="8">8 colors</option>
+        </select>
+      </label>
+    </div>
+
+    <canvas id="canvas"></canvas>
+  </section>
+
+  <section id="palette" class="palette"></section>
+  <p id="note">Images are processed locally in your browser and are not uploaded anywhere.</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
